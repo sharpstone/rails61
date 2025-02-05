@@ -3,9 +3,19 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.3.7'
 
-gem 'railslts-version', require: false
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.7'
+source "https://gems.railslts.com" do
+  gem 'rails', '~> 6.1.7'
+  gem 'actionmailer',     require: false
+  gem 'actionpack',       require: false
+  gem 'activemodel',      require: false
+  gem 'activerecord',     require: false
+  gem 'activesupport',    require: false
+  gem 'railties',         require: false
+  gem 'actionview',       require: false
+  gem 'activejob',        require: false
+  gem 'railslts-version', require: false
+end
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
